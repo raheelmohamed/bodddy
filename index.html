@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Universe For Aboudy💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgm" loop preload="auto">
+    <source src="assets/ambient-space.mp3" type="audio/mp3">
+  </audio>
+
+  <button id="audio-btn" class="audio-toggle" aria-label="Toggle Sound">
+    <span id="audio-icon">🔈</span> <span id="audio-text">Music Off</span>
+  </button>
+
+  <canvas id="space-canvas"></canvas>
+
+  <section id="screen-1" class="screen active">
+    <div class="tagline">A Little Universe, Just For You 💖</div>
+    <h1 class="main-title">Boody💕</h1>
+    <p class="description">
+      Step into a little universe crafted just for Abdulrahman<br>
+    
+    </p>
+    <button id="enter-btn" class="action-btn">Enter your universe</button>
+  </section>
+
+  <section id="screen-2" class="screen">
+    <div class="section-header">
+      <div class="tagline">Into the world we create every night before we sleep, among the stars</div>
+      <h2>Things you don't know I notice</h2>
+      <p class="sub-hint">اضغط على كل نجمة اولا علشان تكتشف 4 اسماء لنجوم اختارتهم لاجل عيونكك و 4 نجووم كل واحده فيهم هتقولك حاجه بحبها فيكك</p>
+    </div>
+
+    <div class="constellation-wrapper" id="constellation-area">
+      <!-- شبكة خطوط الكوكبة الموصلة بين الـ 8 نجوم -->
+      <svg class="constellation-svg" id="constellation-svg">
+        <line id="line-1-2" x1="12%" y1="70%" x2="24%" y2="35%" />
+        <line id="line-2-3" x1="24%" y1="35%" x2="38%" y2="60%" />
+        <line id="line-3-4" x1="38%" y1="60%" x2="50%" y2="22%" />
+        <line id="line-4-5" x1="50%" y1="22%" x2="62%" y2="58%" />
+        <line id="line-5-6" x1="62%" y1="58%" x2="74%" y2="28%" />
+        <line id="line-6-7" x1="74%" y1="28%" x2="86%" y2="68%" />
+        <line id="line-7-8" x1="86%" y1="68%" x2="94%" y2="32%" />
+      </svg>
+
+      <div class="star-node" style="left: 12%; top: 70%;" data-star="1">
+        <div class="star-dot"></div>
+        <div class="star-label">Sirius ✦</div>
+      </div>
+
+      <div class="star-node" style="left: 24%; top: 35%;" data-star="2">
+        <div class="star-dot"></div>
+        <div class="star-label">Polaris ✦</div>
+      </div>
+
+      <div class="star-node" style="left: 38%; top: 60%;" data-star="3">
+        <div class="star-dot"></div>
+        <div class="star-label">Capella ✦</div>
+      </div>
+
+      <div class="star-node" style="left: 50%; top: 22%;" data-star="4">
+        <div class="star-dot"></div>
+        <div class="star-label">Vega ✦</div>
+      </div>
+
+      <div class="star-node" style="left: 62%; top: 58%;" data-star="5">
+        <div class="star-dot"></div>
+        <div class="star-label">Secret Star</div>
+      </div>
+
+      <div class="star-node" style="left: 74%; top: 28%;" data-star="6">
+        <div class="star-dot"></div>
+        <div class="star-label">Secret StarII</div>
+      </div>
+
+      <div class="star-node" style="left: 86%; top: 68%;" data-star="7">
+        <div class="star-dot"></div>
+        <div class="star-label">Secret Star III</div>
+      </div>
+
+      <div class="star-node" style="left: 94%; top: 32%;" data-star="8">
+        <div class="star-dot"></div>
+        <div class="star-label">Secret Star IIII</div>
+      </div>
+    </div>
+
+    <div class="next-orbit-box" id="next-orbit-box">
+      <button id="to-screen-3-btn" class="action-btn">Open When...</button>
+    </div>
+  </section>
+
+  <section id="screen-3" class="screen">
+    <div class="section-header">
+      <div class="tagline">Temporal Messages</div>
+      <h2>Open When...</h2>
+      <p class="sub-hint">افتح الكارد اللي حاسس إنك محتاجها دلوقتي</p>
+    </div>
+
+    <div class="envelopes-grid">
+      <div class="envelope-card" data-envelope="tired">
+        <div class="envelope-icon">💌</div>
+        <h3>لما تحس بالتعب</h3>
+        <p class="envelope-preview">رسالة تخفف عنك تعب اليوم..</p>
+      </div>
+
+      <div class="envelope-card" data-envelope="bored">
+        <div class="envelope-icon">🌙</div>
+        <h3>لما تحس بالملل وعايز تشوف حاجه حلوة مثلا </h3>
+      </div>
+
+      <div class="envelope-card" data-envelope="reminder">
+        <div class="envelope-icon">✨</div>
+        <h3>تذكييير ل عبوديييي</h3>
+        <p class="envelope-preview">حاجات منسية لازم تفتكرها دايماً..</p>
+      </div>
+
+      <div class="envelope-card" data-envelope="sleep">
+        <div class="envelope-icon">🌌</div>
+        <h3>قبل النوووم </h3>
+        <p class="envelope-preview">رسالة قبل نوم لقلبكك..</p>
+      </div>
+    </div>
+
+    <div class="next-orbit-box visible">
+      <button id="to-screen-4-btn" class="action-btn">Next Orbit: A Voice From Me</button>
+    </div>
+  </section>
+
+  <section id="screen-4" class="screen">
+    <div class="section-header">
+      <div class="tagline">Audio Frequency</div>
+      <h2>A Voice From Me</h2>
+      <p class="sub-hint">"Whenever you miss my voice, it's right here."</p>
+    </div>
+
+    <div class="voice-player-card">
+      <div class="audio-waves" id="audio-waves">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <audio id="voice-note" preload="none">
+        <source src="assets/voice.ogg" type="audio/ogg">
+        <source src="assets/voice.ogg" type="audio/mp3">
+      </audio>
+
+      <button id="voice-play-btn" class="voice-btn">
+        <span id="voice-btn-icon">▶</span>
+      </button>
+
+      <div class="voice-status" id="voice-status">Tap to listen</div>
+    </div>
+
+    <div class="next-orbit-box visible">
+      <button id="to-screen-5-btn" class="action-btn">Next Orbit: One Last Thing...</button>
+    </div>
+  </section>
+
+  <section id="screen-5" class="screen">
+    <div class="section-header">
+      <div class="tagline">Endless Horizon</div>
+      <h2>One Last Little Surprise</h2>
+      <p class="sub-hint">رسائل اسباشيييل ل بوديييي  ✨</p>
+    </div>
+
+    <div class="messages-scroll-container">
+      <div class="message-card">
+        <p>"كل سنه وانت معانا ي عبد الرحمن وبالاخص معايا اكيد ملييون المييييه كل سنه وانا وكل اللي بنحبك فخورين بيك طول الوقت بتمني لقلبك ايام جميله زيه بالظبط💖 "</p>
+      </div>
+
+      <div class="message-card">
+        <p> شكراً لوجودك في حياتي يا بودي وعقبال سنيييين كتيييييير وانت ف حياتي دايما يارب حبيت اشكرك ع كل لحظه حسيت فيها بالامان وبالحب وبكل مره حسيت فيها ان عايشه بعد م عرفتكك ، جوا قلبي حاجات كتير اوي يمكن مش عارفه اوصلها لقلبك بس انت اجمل احساس ممكن اكون حسيته ف حياتي، كلها خليك دايما بخير ودايما افتكر ان فيه حد بيتمني قلبك يكون مبسوط العمر كله 💖"</p>
+      </div>
+
+      <div class="message-card">
+        <p>"كل نجمة في الكون ده بتفكرني بحاجه حلوة فيك عموما لان كل صفاتك الحلوه مشش بتخلص ولا ينفع تتعدد .. سنة سعيدة عليك يا أحن وأطيب شخص في العالم 💖 ."</p>
+      </div>
+    </div>
+
+    <div class="screen5-btn-box">
+      <button id="to-screen-6-btn" class="action-btn glow-btn">The Final Question</button>
+    </div>
+  </section>
+
+  <section id="screen-6" class="screen">
+    <img src="assets/us.jpg" alt="Us" class="memory-bg-img" id="memory-bg-img">
+    <div class="memory-overlay"></div>
+
+    <div class="final-dialogue-box">
+      <div class="tagline">Always & Forever</div>
+      <h2 class="question-title">" إنتِ مين؟ "</h2>
+      <p class="question-subtitle">السؤال اللي بتسألهولي طول الوقت..</p>
+
+      <div class="answer-wrapper">
+        <p class="previous-answer">كنت دايماً بقولك: <span>"رحولة عبدالرحمن"</span>..</p>
+        <div class="real-answer" id="real-answer">
+          بس المرة دي وكل المرات الجاية هقولك:<br>
+          <strong>"رحولة.. وقلب، وعمر عبدالرحمن الجاي كله إن شاء الله."</strong>
+        </div>
+      </div>
+
+      <button id="reveal-answer-btn" class="action-btn glow-btn">افتح الإجابة🤍</button>
+      <button id="open-story-btn" class="action-btn glow-btn" style="display: none; margin-top: 15px;">ممكن تقرا قصتنا ؟</button>
+      <button id="restart-journey-btn" class="restart-btn" style="display: none;">Replay the Universe ↺</button>
+    </div>
+  </section>
+
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  
+  <div class="app-modal" id="app-modal">
+    <span class="modal-tag" id="modal-tag">STAR I</span>
+    <h3 class="modal-title" id="modal-title">العنوان</h3>
+    <p class="modal-body" id="modal-body">المحتوى</p>
+    <button class="modal-close-btn" id="modal-close-btn">إغلاق</button>
+  </div>
+
+  <div class="story-modal-backdrop" id="story-modal-backdrop"></div>
+  <div class="story-modal" id="story-modal">
+    <button class="story-close-btn" id="story-close-btn">✕</button>
+
+    <div class="story-tag">CHRONICLES OF US</div>
+    <h3 class="story-title">حكاية التقاء قلوبنا 🌌</h3>
+    <div class="story-text">
+      <p>غمض عينك ثواني.. وسيب دوشة العالم دي كلها وراك، وتعال أسحبك من إيدك لعالم تاني خالص مفيش فيه غيرنا إحنا الاتنين ✨</p>
+      
+      <p>تخيل إننا روحنا مكان هادي وساحر على طرف كوكب بعيد، السما فوقينا لونها بنفسجي هادي ومتغطية بملايين النجوم اللي بتلمع ببطء.. قعدنا سوا في مكان دافي وسط نسمة هوا لطيفة، مفيش أي صوت حوالينا غير صوت هدوء الكون، حطيت راسك على كتفي وبدأت أطبطب عليك بهدوء وأنت مغمض عينك ومستسلم للراحة بعد تعب الدنيا كلها.. وقبل ما يغلبك النوم، بدأت أحكيلك بصوت واطي حكايتنا من أولها:</p>
+      
+      <p>فاكر لما بدأ كل شيء بحديث هادئ ورسمي في حدود الشغل؟ مسار مكنش يوحي بأي حاجة، لحد ما القدر رتب عودتنا لبعض من جديد.. وفجأة، ذابت كل الحواجز في ضحكة عفوية وهزار لطيف، ودعوة دافية فتحت بينا باب لعالم مكنّاش نتخيله.</p>
+      
+      <p>ومن أول اتصال كسر الهدوء، تحولت الدقايق لساعات، وبقت مكالماتنا اليومية اللي بتستمر لحد الفجر هي الوطن والملاذ.. كأن كل ثانية معاك عُمر كامل . تسللت التلميحات بهدوء، ومشاعر خوف وغيره صغيرة ولطيفة مكنش ينفع تستخبى، أدركت وقتها قد إيه بقيت مهم بالنسالي، وفهمت ليه قلبي عجز ياخد أي خطوة لورا؛ لأنك الوحيد اللي بيقرأ صمتي، فرحي، وزعلي قبل ما أنطق بحرف.</p>
+      
+      <p>لحد ما جه اليوم اللي اعترفتلي فيه باللي شايله في قلبك من أول لقاء.. ولأول مرة في حياتي، يجتمع عقلي وقلبي على نفس الشخص بلا تردد أو خوف، وتلاشت بينا كل المسافات حتى قبل ما تتقابل عيوننا.</p>
+      
+      <p>وجه اليوم الموعود.. أول نظرة طمنت روحي، أول كلمة إعجاب ولمعة في عينيك، وأول باقة ورد اتمنيت لو يفضل عطرها في إيدي على طول، وأول جواب كتبته عشان يلمس قلبي من أطيب وأحن شخص في العالم.. يوم اتمنيت لعقارب ساعته إنها متتحركش أبداً.</p>
+      
+      <p>مع كل مرة بتحتويني فيها برقة، ومبتسبنيش لظنون عقلي، ومع كل ليلة بننهي فيها تعب اليوم بهمس أنفاسنا لحد ما يغلبنا النوم سوا.. بتاكد قد إيه أنا محظوظة بوجودك في حياتي.</p>
+      
+      <p>نام وارتاح يا بودي في عالمنا الصغير ده.. والنهاردة، وإنت بتقرأ الكلام ده في يوم ميلادك، وهو أول عيد ميلاد ليك وإنت في حياتي.. بتمنى لك من كل قلبي كل السعادة والراحة اللي تسع الفضاء ده كله، وإنك تعيش كل اللحظات الحلوة اللي بتتمناها، وأشوفك دايماً أنجح وأعظم إنسان في أمان وسكينة.. وعشان كل ده يتحقق، فأكيد ومؤكد لازم أكون شريكة كل أيامك وسنينك الجاية 🤍</p>
+      
+      <p>كل سنة وإنت طيب يا بودي، ويا رب تتبسط بأبسط حاجة عملتها عشانك.. كان نفسي أكون جمبك بكيك صغيرة وأطلب منك تغمض عينك وتتمنى أمنية ونطفي الشمعة سوا، بس وجودك في قلبي منور أكتر من ألف شمعة وسط النجوم ✨</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
